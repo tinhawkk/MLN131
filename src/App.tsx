@@ -26,7 +26,7 @@ export type GameState = {
   showConcept?: boolean;
 };
 
-const socketUrl = import.meta.env.VITE_SOCKET_URL || "http://localhost:3002";
+const socketUrl = import.meta.env.VITE_SOCKET_URL || "";
 const socket: Socket = io(socketUrl);
 
 function MainApp() {
