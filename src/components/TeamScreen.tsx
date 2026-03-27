@@ -53,10 +53,10 @@ export default function TeamScreen({
   const isSixKeywordQuestion = currentQuestion?.id === "4.5";
   const isActive = Boolean(
     stage &&
-      gameState &&
-      gameState.activeQuestion === gameState.step &&
-      !gameState.showConcept &&
-      currentQuestion,
+    gameState &&
+    gameState.activeQuestion === gameState.step &&
+    !gameState.showConcept &&
+    currentQuestion,
   );
 
   useEffect(() => {
@@ -115,7 +115,6 @@ export default function TeamScreen({
       </div>
     );
   }
-
 
   const submitAnswer = (answer: number | number[] | string | string[]) => {
     const timeTaken = Math.max(0, Date.now() - gameState.stepStartTime);
