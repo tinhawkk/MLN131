@@ -95,7 +95,7 @@ function MainApp() {
       {/* Nút chuyển đổi chế độ tối/sáng */}
       <button
         onClick={() => setIsDarkMode(!isDarkMode)}
-        className="fixed top-6 right-6 z-[110] p-3 rounded-full shadow-xl transition-all hover:scale-110 active:scale-95 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-md border border-slate-200 dark:border-zinc-700 group"
+        className="fixed bottom-24 right-6 z-[110] p-3 rounded-full shadow-xl transition-all hover:scale-110 active:scale-95 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-md border border-slate-200 dark:border-zinc-700 group"
       >
         {isDarkMode ? (
           <svg
@@ -246,6 +246,67 @@ function MainApp() {
                         Vào chơi ngay
                       </button>
                     </form>
+
+                    {/* Section Đội ngũ phát triển NỔI BẬT CAO CẤP */}
+                    <div className="pt-12 pb-6">
+                      <div className="relative p-8 rounded-[2rem] bg-gradient-to-br from-slate-50 to-slate-100 dark:from-zinc-900/50 dark:to-zinc-800/50 border border-slate-200 dark:border-zinc-700/50 overflow-hidden group">
+                        {/* Hiệu ứng ánh sáng chạy qua */}
+                        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+
+                        <div className="relative flex flex-col items-center gap-6">
+                          <div className="flex -space-x-4">
+                            <div className="relative group/avatar">
+                              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-40 group-hover/avatar:opacity-100 transition duration-500"></div>
+                              <div
+                                title="Hồ Tú Minh Triều - SE183846"
+                                className="relative w-16 h-16 rounded-full bg-blue-600 border-4 border-white dark:border-zinc-900 flex items-center justify-center text-lg font-black text-white shadow-2xl z-30 transform hover:scale-110 hover:-rotate-6 transition-all cursor-help"
+                              >
+                                TM
+                              </div>
+                            </div>
+                            <div className="relative group/avatar">
+                              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-500 rounded-full blur opacity-40 group-hover/avatar:opacity-100 transition duration-500"></div>
+                              <div
+                                title="Hoàng Trung Tín - SE182892"
+                                className="relative w-16 h-16 rounded-full bg-red-600 border-4 border-white dark:border-zinc-900 flex items-center justify-center text-lg font-black text-white shadow-2xl z-20 transform hover:scale-110 transition-all cursor-help"
+                              >
+                                TT
+                              </div>
+                            </div>
+                            <div className="relative group/avatar">
+                              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-full blur opacity-40 group-hover/avatar:opacity-100 transition duration-500"></div>
+                              <div
+                                title="Trần Đỗ Đăng Khoa - SE161408"
+                                className="relative w-16 h-16 rounded-full bg-emerald-600 border-4 border-white dark:border-zinc-900 flex items-center justify-center text-lg font-black text-white shadow-2xl z-10 transform hover:scale-110 hover:rotate-6 transition-all cursor-help"
+                              >
+                                DK
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="space-y-1 text-center">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-2">
+                              <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                              </span>
+                              <span className="text-[10px] font-black uppercase tracking-widest">
+                                Core Developers
+                              </span>
+                            </div>
+                            <h3 className="text-2xl font-black text-slate-800 dark:text-white tracking-tighter uppercase italic">
+                              DÂN CHỦ SỐ{" "}
+                              <span className="text-blue-600 dark:text-blue-500">
+                                TEAM
+                              </span>
+                            </h3>
+                            <p className="text-slate-500 dark:text-zinc-500 text-[11px] font-medium max-w-[200px] mx-auto leading-tight uppercase tracking-[0.1em]">
+                              Sáng tạo • Trách nhiệm • Vì cộng đồng
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -382,25 +443,39 @@ function MainApp() {
       </div>
 
       {/* Footer chuyên nghiệp */}
-      <footer className="bg-white dark:bg-zinc-950 border-t border-slate-100 dark:border-zinc-900 h-20 shrink-0 flex items-center z-[100] transition-colors duration-500 px-8">
-        <div className="container mx-auto flex justify-between items-center w-full">
-          <div className="flex items-center gap-6">
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                Hồ Tú Minh Triều - SE183846
+      <footer className="bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg border-t border-slate-100 dark:border-zinc-900 min-h-20 py-4 shrink-0 flex items-center z-[100] transition-colors duration-500 px-4 md:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <div className="flex -space-x-3">
+              <div
+                title="Hồ Tú Minh Triều - SE183846"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white shadow-lg hover:z-50 hover:scale-110 transition-all cursor-help"
+              >
+                TM
               </div>
-              <div className="w-8 h-8 rounded-full bg-red-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                Hoàng Trung Tín - SE182892
+              <div
+                title="Hoàng Trung Tín - SE182892"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white shadow-lg hover:z-50 hover:scale-110 transition-all cursor-help"
+              >
+                TT
               </div>
-              <div className="w-8 h-8 rounded-full bg-emerald-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                Trần Đỗ Đăng Khoa - SE161408
+              <div
+                title="Trần Đỗ Đăng Khoa - SE161408"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white shadow-lg hover:z-50 hover:scale-110 transition-all cursor-help"
+              >
+                DK
               </div>
             </div>
-            <p className="text-slate-400 dark:text-zinc-500 uppercase tracking-[0.2em] font-black text-[10px]">
-              Đội ngũ phát triển
-            </p>
+            <div className="flex flex-col items-center md:items-start">
+              <p className="text-slate-400 dark:text-zinc-500 uppercase tracking-[0.2em] font-black text-[10px] leading-none mb-1">
+                Đội ngũ phát triển
+              </p>
+              <p className="text-slate-900 dark:text-white font-bold text-xs">
+                Nhóm 3
+              </p>
+            </div>
           </div>
-          <div className="flex items-center gap-4 bg-slate-50 dark:bg-zinc-900 px-5 py-2.5 rounded-2xl border border-slate-100 dark:border-zinc-800">
+          <div className="flex items-center gap-4 bg-white dark:bg-zinc-900 px-5 py-2.5 rounded-2xl border border-slate-100 dark:border-zinc-800 shadow-sm">
             <div className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
