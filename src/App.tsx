@@ -387,13 +387,13 @@ function MainApp() {
           <div className="flex items-center gap-6">
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                A
+                Hồ Tú Minh Triều - SE183846
               </div>
               <div className="w-8 h-8 rounded-full bg-red-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                B
+                Hoàng Trung Tín - SE182892
               </div>
               <div className="w-8 h-8 rounded-full bg-emerald-600 border-2 border-white dark:border-zinc-950 flex items-center justify-center text-[10px] font-black text-white">
-                C
+                Trần Đỗ Đăng Khoa - SE161408
               </div>
             </div>
             <p className="text-slate-400 dark:text-zinc-500 uppercase tracking-[0.2em] font-black text-[10px]">
